@@ -1,0 +1,4 @@
+- src: https://github.com/xussof/software_golang
+  scm: git
+  version: master
+  name: software_golang

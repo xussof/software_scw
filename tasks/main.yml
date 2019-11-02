@@ -1,0 +1,9 @@
+#- name: Wgeting .deb
+#  shell: wget "https://github.com/scaleway/scaleway-cli/releases/download/v1.20/scw_1.20_${ARCH}.deb" -O /tmp/scw.deb
+
+- name: DPKG install
+  become: true
+  apt:
+    deb: "https://github.com/scaleway/scaleway-cli/releases/download/v1.20/scw_1.20_{{ arch }}.deb"
+
+#sudo dpkg -i /tmp/scw.deb && rm -f /tmp/scw.deb
